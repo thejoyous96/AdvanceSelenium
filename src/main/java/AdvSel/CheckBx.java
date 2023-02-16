@@ -25,30 +25,51 @@ public class CheckBx {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 		
+		Thread.sleep(4000);
+
+		
 		driver.findElement(By.xpath("//a[text()='Checkboxes']")).click();
 		
-		WebElement box1 = driver.findElement(By.xpath("(//input[@type='checkbox'])[1]"));
 		
-		WebElement box2 = driver.findElement(By.xpath("(//input[@type='checkbox'])[2]"));
-				
-		
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 
+		
+		WebElement B1 = driver.findElement(By.xpath("(//input[@type='checkbox'])[1]"));
+		
+		if (!B1.isSelected()) {
+           		
+			B1.click();
+						
+			System.out.println("Box 1 was Selected.");
+
+        }
+		
+		else {
+						 
+			System.out.println("Box 1 is already Selected.");
+
+		}
+		
+		
+		WebElement B2 = driver.findElement(By.xpath("(//input[@type='checkbox'])[2]"));
 	
-		if (box1.isSelected()) {
+		if (!B2.isSelected()) {
+	           
 			
-			System.out.println("CheckBox 1 was already selected");
+			B2.click();
+						
+			System.out.println("Box 2 was Selected.");
 
+        }
+		
+		else {
+			
+			System.out.println("Box 2 is already Selected.");
+			
 		}
 		
-		else 
 		
-		{
-			box1.click();
-		}
-		
-		
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		
 		
 		driver.close();
