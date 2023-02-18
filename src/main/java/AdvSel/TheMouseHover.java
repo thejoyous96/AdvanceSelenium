@@ -19,16 +19,16 @@ public class TheMouseHover {
 		WebDriver driver = new ChromeDriver();
 		
 		
-		driver.get("https://www.amazon.com/");
+		driver.get("https://www.nike.com/");
 		
 		driver.manage().window().maximize();
 		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 		
-		WebElement a = driver.findElement(By.xpath("//a[@id='nav-link-accountList']"));
+		WebElement a = driver.findElement(By.xpath("//a[@data-path='men']"));
 		
-		WebElement b = driver.findElement(By.xpath("(//span[contains(text(),'Account')])[2]"));
+		WebElement b = driver.findElement(By.xpath("(//a[@data-path='men/shoes']"));
 		
 		
 		Actions act = new Actions (driver); 
@@ -40,5 +40,6 @@ public class TheMouseHover {
 		
 		
 		driver.close();
+		
 	}
 }
