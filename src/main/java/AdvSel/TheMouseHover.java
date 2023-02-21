@@ -19,16 +19,16 @@ public class TheMouseHover {
 		WebDriver driver = new ChromeDriver();
 		
 		
-		driver.get("https://www.nike.com/");
+		driver.get("https://www.amazon.com/");
 		
 		driver.manage().window().maximize();
 		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 		
-		WebElement a = driver.findElement(By.xpath("//a[@data-path='men']"));
+		WebElement a = driver.findElement(By.xpath("//span[@id='nav-link-accountList-nav-line-1']"));
 		
-		WebElement b = driver.findElement(By.xpath("(//a[@data-path='men/shoes']"));
+		WebElement b = driver.findElement(By.xpath("(//span[@class='nav-text'])[4]"));
 		
 		
 		Actions act = new Actions (driver); 
